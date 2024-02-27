@@ -1,6 +1,5 @@
 <?php
-    require_once("./init.php");
-    $hotel_index = 0;
+    require __DIR__ . "/./functions.php";
 ?>
 
                 <!-- $_GET['paragraph'] -->
@@ -32,20 +31,20 @@
         method="GET"
         class="d-flex justify-content-around align-items-center mt-4 mb-4"
       >
-        <div class="parking">
-          <input type="radio" id="parking" name="parking-status" />
-          <label for="pareking">parcheggio</label><br />
-          <input type="radio" id="no-parking" name="parking-status" />
-          <label for="no-parking">NO parcheggio</label><br />
+        <div class="parking form-check">
+          <input class="form-check-input" type="checkbox" id="parking-status" name="parking-status" 
+          <?php $filter_parking ? 'checked' : '' ?>
+          />
+          <label class="form-check-label" for="parking-status">con parcheggio</label>
         </div>
         <div class="vote">
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" aria-label="Default select example" id="star_number" name="star_number">
             <option selected>Open this select menu</option>
-            <option value="1">&star;</option>
-            <option value="2">&star;&star;&star;</option>
-            <option value="3">&star;&star;&star;</option>
-            <option value="4">&star;&star;&star;&star;</option>
-            <option value="5">&star;&star;&star;&star;&star;</option>
+            <option value="1">1/5 &star;</option>
+            <option value="2">2/5 &star;&star;&star;</option>
+            <option value="3">3/5 &star;&star;&star;</option>
+            <option value="4">4/5 &star;&star;&star;&star;</option>
+            <option value="5">5/5 &star;&star;&star;&star;&star;</option>
           </select>
         </div>
         <button class="btn btn-primary">Cerca</button>
@@ -54,7 +53,7 @@
     </header>
     <main>
       <div class="container">
-        <table class="table table-primary">
+        <table class="table table-primary table-hover">
           <thead>
             <tr>
             <th scope="col">#</th>
@@ -72,7 +71,7 @@
               <th scope="row"> <?= $hotel_index ?></th>
               <td> <?= $hotel["name"] ?> </td>
               <td> <?= $hotel["description"] ?> </td>
-              <td> <?= $parking = $hotel["parking"] ? 'si' : 'no'; ?> </td>
+              <td> <?= $hotel["parking"] ? '✔️' : '❌'; ?> </td>
               <td> <?= $hotel["vote"] ?>  &star; </td>
               <td> <?= $hotel["distance_to_center"] ?> km </td>
             </tr>

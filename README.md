@@ -15,3 +15,13 @@ Dopo aggiungete Bootstrap e mostrate le informazioni con una tabella.
 
 deve essere possibile utilizzare entrambi i filtri contemporaneamente (es. ottenere una lista con hotel che dispongono di parcheggio e che hanno un voto di tre stelle o superiore)
 Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gli hotel.
+
+## Descrizione
+
+1. Completate l'esercizio di ieri e organizzate il codice dividendo dati, logica e template.
+
+2. Infine aggiungete i filtri come visto oggi a lezione (potete filtrate "manualmente" o con il metodo array_filter).
+
+## Bonus
+
+I valori degli input del form rimangono salvati dopo averlo inviato

@@ -40,4 +40,7 @@
 
     ];
 
+    // indice per contare i risultati di hotel
+    $hotel_index = 0;
+
 ?>
