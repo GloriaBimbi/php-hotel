@@ -37,15 +37,14 @@
           />
           <label class="form-check-label" for="parking-status">con parcheggio</label>
         </div>
-        <!-- <i class="fa-solid fa-star"></i> -->
         <div class="vote">
           <select class="form-select" aria-label="Default select example" id="star_number" name="star_number">
             <option value="0">Scegli l'opzione che preferisci</option>
-            <option value="1" <?= ($filter_star && $selected_star == 1) ? 'selected' : ''; ?>>⭐</option>
-            <option value="2" <?= ($filter_star && $selected_star == 2) ? 'selected' : ''; ?>>⭐⭐</option>
-            <option value="3" <?= ($filter_star && $selected_star == 3) ? 'selected' : ''; ?>>⭐⭐⭐</option>
-            <option value="4" <?= ($filter_star && $selected_star == 4) ? 'selected' : ''; ?>>⭐⭐⭐⭐</option>
-            <option value="5" <?= ($filter_star && $selected_star == 5) ? 'selected' : ''; ?>>⭐⭐⭐⭐⭐</option>
+            <option value="1" <?= ($filter_star && $selected_star == 1) ? 'selected' : ''; ?>>★☆☆☆☆</option>
+            <option value="2" <?= ($filter_star && $selected_star == 2) ? 'selected' : ''; ?>>★★☆☆☆</option>
+            <option value="3" <?= ($filter_star && $selected_star == 3) ? 'selected' : ''; ?>>★★★☆☆</option>
+            <option value="4" <?= ($filter_star && $selected_star == 4) ? 'selected' : ''; ?>>★★★★☆</option>
+            <option value="5" <?= ($filter_star && $selected_star == 5) ? 'selected' : ''; ?>>★★★★★</option>
           </select>
         </div>
         <button class="btn btn-primary">Cerca</button>
